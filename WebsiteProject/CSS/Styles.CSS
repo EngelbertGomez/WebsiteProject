@@ -82,8 +82,7 @@ body.dark-mode .btn-secondary:hover {
 }
 
 body.welcome-page {
-    background: linear-gradient(135deg, #111827, #1f2937);
-    color: #fff;
+    background: linear-gradient(135deg, #351a75, #aa331b);
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", sans-serif;
@@ -143,3 +142,5 @@ P {
 .btn-secondary:hover {
     background-color: #c5c5c5;
 }
+
+/* Be right back... */
