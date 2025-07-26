@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="welcome-page">
+
+    <div class="container fade-in">
+        <h1>Registro</h1>
+
+        <!--Tipo de cuenta-->
+        <form id="registerFrom" action="#" method="POST">
+            <label for="accountType">tipo de cuenta:</label><br/>
+            <select id="accountType" name="accountType" 
+             required style="margin-bottom: 20px; padding: 10px; width: 100%;">
+             <option value="">Seleccione su tipo de cuenta</option>
+             <option value="personal">Cuenta Personal</option>
+             <option value="negocios">Cuenta de negocios</option>
+             <option value="admin">Cuenta Admin</option>
+            </select>
+
+        <!---Campo adicional para RNC-->
+            <div id="rncField" style="display:none; margin-bottom: 15px;">
+                <input type="text" name="rnc" placeholder="Numero de RNC" 
+                style="padding: 10px; width: 100%; border-radius: 6px;
+                border: 1px solid #ccc;" />
+            </div>
+
+        <!--Campo adicional para numero de empleado-->
+            <div id="empleadoField" style="display:none; margin-bottom: 15px;">
+                <input type="text" name="empleado" placeholder="Numero de empleado"
+                style="padding: 10px; width: 100%; border-radius: 6px; 
+                border: 1px solid #ccc;" />
+            </div>
+
+        <!--Verificación de identidad-->
+            <input type="text" name="cedula" placeholder="Cédula de identidad" required style="margin-bottom: 15px; padding: 10px; width: 100%; border-radius: 6px; border: 1px solid #ccc;" />
+            <input type="text" name="nombre" placeholder="Nombre completo" required style="margin-bottom: 15px; padding: 10px; width: 100%; border-radius: 6px; border: 1px solid #ccc;" />
+            <input type="email" name="email" placeholder="Correo electrónico" required style="margin-bottom: 15px; padding: 10px; width: 100%; border-radius: 6px; border: 1px solid #ccc;" />
+            <input type="tel" name="telefono" placeholder="Número de celular" required style="margin-bottom: 20px; padding: 10px; width: 100%; border-radius: 6px; border: 1px solid #ccc;" />
+  
+            <button type="summit" class="btn btn-primary">Continuar</button>
+        </form>
+    </div>
+
+        <!--Logica para mostrar campos adicionales-->
+        <script>
+            const accountType = document.getElementById("accountType");
+            const rncField = document.getElementbyID("rncfield");
+            const empleadoField = document.getElementByID("empleadoField");
+
+            accountType.addEventListener("change", () => {
+                const value = accountType.value;
+
+                rncField.style.display = (value === "negocio") ? "block" : "none"; 
+                empleadoField.style.display = (value === "admin") ? "block" : "none";
+            });
+        </script>
+</body>
+</html>
