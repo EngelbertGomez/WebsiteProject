@@ -162,4 +162,37 @@ body.login-form {
     background: linear-gradient(135deg, #0066ff, #00cc99);
     margin: 0;
     padding: 0;
-    font-f
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body.login-form .container {
+    text-align: center;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.login-form h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+
+/* Animation and style for login form */
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+from{
+    opacity: 0;
+    transform: translateY(0);
+  
+    }
+  }
+}
