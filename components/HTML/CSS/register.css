@@ -1,0 +1,105 @@
+/* Fondo general con degradado */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f004d 25%, #ff6f00 100%);
+}
+
+/* Cuerpo centrado vertical y horizontal */
+body.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal del formulario */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  max-width: 450px;
+  width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Título */
+.container h1 {
+  margin-bottom: 1.5rem;
+  color: #1f004d;
+}
+
+/* Inputs y selects */
+form input,
+form select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Inputs en focus */
+form input:focus,
+form select:focus {
+  border-color: #ff6f00;
+  outline: none;
+}
+
+/* Botón principal */
+form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 25px;
+  background-color: #ff6f00;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  background-color: #9b00ff;
+  box-shadow: 0 7px 20px rgba(230, 92, 0, 0.7);
+}
+
+/* Enlaces inferiores */
+.container a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #9b00ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.container a:hover {
+  color: #ff6f00;
+}
+
+/* Animación opcional (si la usas en .fade-in) */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

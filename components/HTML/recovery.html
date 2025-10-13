@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recuperar Contraseña</title>
+  <link rel="stylesheet" href="css/recovery.css" />
+</head>
+<body class="hero-page">
+  <div class="container">
+    <h1>Recuperar contraseña</h1>
+    <p>Introduce tu correo electrónico para restablecer tu contraseña</p>
+
+    <form id="recoveryForm" class="form-group">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Correo electrónico"
+        required
+        autocomplete="email"
+      />
+      <button type="submit" class="btn">Enviar enlace de recuperación</button>
+    </form>
+
+    <p><a href="index.html">Volver a inicio</a></p>
+  </div>
+
+  <script src="js/recovery.js"></script>
+</body>
+</html>

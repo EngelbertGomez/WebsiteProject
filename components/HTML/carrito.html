@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="css/carrito.css" />
+</head>
+<body>
+  <div class="cart">
+    <h2>Tu Carrito</h2>
+    <div class="cart-items">
+      <!-- Producto ejemplo -->
+      <div class="cart-item">
+        <img src="assets/img/product1.jpg" alt="Producto 1">
+        <div class="item-info">
+          <h4>Producto 1</h4>
+          <p class="price">$20</p>
+        </div>
+        <div class="item-qty">
+          <button class="decrease">-</button>
+          <span class="quantity">1</span>
+          <button class="increase">+</button>
+        </div>
+        <button class="remove-btn">✖</button>
+      </div>
+    </div>
+
+    <div class="return-2-store">
+      <a href="../../home.html">Regresar a la tienda</a>
+    </div>
+
+    <div class="cart-total">
+      Total: <span id="total">$20</span>
+    </div>
+    <button class="checkout-btn">Finalizar Compra</button>
+  </div>
+
+
+
+</body>
+</html>

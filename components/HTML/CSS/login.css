@@ -1,0 +1,150 @@
+body.welcome-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f004d 25%, #ff6f00 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Contenedor más grande y centrado */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Título */
+.container h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #1f004d;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #9b00ff;
+}
+
+/* Checkbox */
+.remember-me {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.remember-me input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 14px 0;
+  background-color: #ff6f00;
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.5);
+  border: none;
+  border-radius: 80px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #9b00ff;
+  transform: scale(1.05);
+}
+
+/* Enlaces */
+.additional-links {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.additional-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #9b00ff;
+  transition: color 0.3s ease;
+}
+
+.additional-links a:hover {
+  color: #ff6f00;
+}
+
+/* Registro */
+p.register-text {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #000000;
+}
+
+p.register-text a {
+  color: #9b00ff;
+  border: none;
+  padding: 2px 2px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-left: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.register-text a:hover {
+  color: #ff6f00;
+}
+
+/* Link inicio */
+p a#linkToHome {
+  display: inline-block;
+  margin-top: 25px;
+  color: #9b00ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px
+}
+
+p a#linkToHome:hover {
+  color: #ff6f00;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
