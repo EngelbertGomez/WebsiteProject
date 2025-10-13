@@ -1,0 +1,134 @@
+body.hero-page {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f004d 25%, #ff6f00 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  /* Tarjeta centrada */
+  .container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(155, 0, 255, 0.2);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Título */
+  .container h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #1f004d;
+  }
+  
+  /* Descripción */
+  .container p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #000000;
+  }
+  
+  /* Formulario */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input */
+  input[type="email"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #9b00ff;
+  }
+  
+  /* Botón */
+  .btn {
+    padding: 14px 0;
+    width: 100%;
+    border: none;
+    border-radius: 80px;
+    background-color: #ff6f00;
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #9b00ff;
+    transform: scale(1.05);
+  }
+  
+  .container a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #9b00ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+   a:hover {          /* 2hrs spent tryna make this sh.. work :)))*/
+    color: #ff6f00;
+
+  }
+
+  /* Mensaje de alerta */
+  .alert-message{
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: 600
+    text-align: center;
+    animation: fadeInUp 0.5 ease-out forwards;
+  }
+
+  .alert-message.success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+  }
+
+  .alert-message.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+  }
+  
+  /* Animación de entrada */
+ @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }

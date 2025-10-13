@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro de Usuario</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/register.css" />
 </head>
 <body class="welcome-page">
 
@@ -12,9 +12,8 @@
     <h1>Registro</h1>
 
     <form id="registerForm">
-      <label for="accountType">Tipo de cuenta:</label>
+      <label for="accountType">Seleccione su tipo de cuenta</label>
       <select id="accountType" name="accountType" required>
-        <option value="">Selecciona una opción</option>
         <option value="personal">Cuenta Personal</option>
         <option value="negocios">Cuenta de Negocios</option>
         <option value="admin">Cuenta Administrador</option>
@@ -36,9 +35,12 @@
       </div>
 
       <button type="submit">Continuar</button>
+
+      <p><a href="index.html" id="linkToHome">Volver a inicio</a></p>
+      
     </form>
 
-    <p>¿Ya tienes una cuenta? <a href="login.html" id="linkToLogin">Inicia sesión</a></p>
+    <p>¿Ya tienes una cuenta? <a href="login-form.html" id="linkToLogin">Inicia sesión</a></p>
   </div>
 
   <script>
@@ -53,5 +55,6 @@
       empleadoField.style.display = (value === "admin") ? "block" : "none";
     });
   </script>
+  <script type="module" src="js/register.js"></script>
 </body>
 </html>

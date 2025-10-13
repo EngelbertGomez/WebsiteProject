@@ -1,0 +1,130 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.hero-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f004d 25%, #ff6f00 100%);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(55, 1, 154, 0.4);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.0rem;
+  margin-bottom: 15px;
+  color: #1f004d;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6f00;
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.5);
+  color: white;
+  padding: 12px 13px;
+  border-radius: 80px;
+  text-decoration: none;
+  justify-content: center; 
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #9b00ff;
+  transform: scale(1.05);
+}
+
+.additional-links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.additional-links a {
+  color: #9b00ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+
+
+.additional-links a:hover {
+  color: #ff6f00;
+}
+
+.return-2-store {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.return-2-store a {
+  color: #9b00ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.return-2-store a:hover {
+  color: #ff6f00;
+}
+
+#linkToLogin {
+  color: #ff6f00;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#linkToLogin:hover {
+  color: #9b00ff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}

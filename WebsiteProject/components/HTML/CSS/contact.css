@@ -1,0 +1,102 @@
+body.contact-page {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1f004d 25%, #ff6f00 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.contact-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(55, 1, 154, 0.4);
+}
+
+/* Título */
+.contact-container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #1f004d;
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #9b00ff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #666;
+}
+
+/* Botón */
+button {
+  margin-top: 10px;
+  background-color: #ff6f00;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(255, 111, 0, 0.5);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 80px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #9b00ff;
+  transform: scale(1.05);
+}
+
+/* Animación de fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+p a#linkToHome {
+  display: inline-block;
+  margin-top: 10px;
+  color: #9b00ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px
+}
+
+p a#linkToHome:hover {
+  color: #ff6f00;
+}
+  
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Confirmación de mensaje enviado */
+.mensaje-enviado {
+  margin-bottom: flex;
+  font-weight: bold;
+  color: #ff6f00;
+}
