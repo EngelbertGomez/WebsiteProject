@@ -51,8 +51,17 @@
     accountType.addEventListener("change", () => {
       const value = accountType.value;
 
-      rncField.style.display = (value === "negocios") ? "block" : "none";
-      empleadoField.style.display = (value === "admin") ? "block" : "none";
+      // Ocultar ambos primero
+      rncField.style.display = "none";
+      empleadoField.style.display = "none";
+
+      // Mostrar el campo relevante
+      if (value == "negocios") {
+        rncField.style.display = "block";
+      } else if (value == "admin") {
+        empleadoField.style.display = "block";
+      }
+
     });
   </script>
   <script type="module" src="js/register.js"></script>
