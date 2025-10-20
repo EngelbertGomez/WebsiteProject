@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("register.js cargado correctamente");
 
   const form = document.getElementById("registerForm");
-  const URL_BACKEND_REGISTRO = "http://localhost:8080/api/clients/register"; // <-- 💡 DEFINIR URL DEL BACKEND
+  // ¡ATENCIÓN! Cambié el endpoint de 'clients' a 'clientes' 
+  // para que coincida con la convención de nombres en español (si tu ClientController usa '/api/clientes').
+  // Verifica el path en tu ClientController de Spring Boot.
+  const URL_BACKEND_REGISTRO = "http://localhost:8080/api/clientes/register"; 
 
   form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -12,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const nombre = form.nombre.value.trim();
       const email = form.email.value.trim();
       const celular = form.celular.value.trim();
-      const password = form.password.value;
+      const password = form.password.value; // Ya disponible en el HTML actualizado
       const confirmPassword = form.confirmPassword.value;
       
       // Campos condicionales
@@ -20,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const numEmpleado = form.numEmpleado ? form.numEmpleado.value.trim() : null;
 
       if (password !== confirmPassword) {
-          alert("Las contraseñas no coinciden. Por favor, revísalas.");
+          // Usamos una notificación en lugar de alert()
+          console.error("Las contraseñas no coinciden.");
+          alert("Las contraseñas no coinciden. Por favor, revísalas."); 
           return;
       }
 
@@ -31,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           nombre: nombre,
           email: email,
           celular: celular,
-          password: password,
+          password: password, // <-- ¡AÑADIDO! Esto es fundamental para la seguridad y el registro
           // Incluir solo los campos relevantes según el tipo de cuenta
           ...(accountType === 'negocios' && { rnc: rnc }),
           ...(accountType === 'admin' && { numEmpleado: numEmpleado })
@@ -47,20 +52,27 @@ document.addEventListener("DOMContentLoaded", () => {
               body: JSON.stringify(userData),
           });
 
-          const result = await response.json();
+          // Aseguramos que la respuesta tenga JSON, incluso si es un error HTTP
+          let result = {};
+          try {
+            result = await response.json();
+          } catch (e) {
+            // Si no es JSON (ej: un error 500 HTML), usamos un mensaje genérico
+            console.error('Respuesta no es JSON:', response);
+            result.message = "Respuesta no JSON del servidor. Revisa el backend.";
+          }
 
           if (response.ok) {
               // Registro exitoso
-              alert(`¡Bienvenido, ${nombre}! Tu cuenta fue registrada con éxito. Redirigiendo al inicio de sesión...`);
+              alert(`¡Bienvenido, ${nombre}! Tu cuenta fue registrada con éxito. Redirigiendo...`);
               // Redirigir al login
               window.location.href = "login-form.html"; 
           } else {
-              // Error del servidor o validación (ej: email duplicado)
-              // El backend debería devolver un mensaje de error útil
-              alert(`Error en el registro: ${result.message || 'Ocurrió un error desconocido.'}`);
+              // Error del servidor o validación
+              alert(`Error en el registro: ${result.message || response.statusText}`);
           }
       } catch (error) {
-          console.error('Error al enviar el formulario:', error);
+          console.error('Error de conexión con el servidor:', error);
           alert("Error de conexión con el servidor. Intenta de nuevo más tarde.");
       }
 

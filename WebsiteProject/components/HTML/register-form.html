@@ -4,7 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro de Usuario</title>
-  <link rel="stylesheet" href="css/register.css" />
+  <!-- Asumo que tienes un archivo CSS para el estilo -->
+  <link rel="stylesheet" href="css/register.css" /> 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos base para que el formulario se vea bien si no hay CSS externo */
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #f7f7f7;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        font-family: 'Inter', sans-serif;
+    }
+    input, select, button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+  </style>
 </head>
 <body class="welcome-page">
 
@@ -23,6 +59,10 @@
       <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
       <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
       <input type="tel" id="celular" name="celular" placeholder="Número de celular" required>
+
+      <!-- Campos de Contraseña AÑADIDOS -->
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Contraseña" required>
 
       <!-- Campo adicional: RNC -->
       <div id="rncField" style="display: none;">
@@ -44,6 +84,7 @@
   </div>
 
   <script>
+    // Lógica para mostrar/ocultar campos (ya estaba en tu código)
     const accountType = document.getElementById("accountType");
     const rncField = document.getElementById("rncField");
     const empleadoField = document.getElementById("empleadoField");
@@ -61,7 +102,6 @@
       } else if (value == "admin") {
         empleadoField.style.display = "block";
       }
-
     });
   </script>
   <script type="module" src="js/register.js"></script>
