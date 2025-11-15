@@ -1,4 +1,2 @@
 # WebsiteProject
-Repositorio para website
-
-Working on it... 
+Website frontend repo.
